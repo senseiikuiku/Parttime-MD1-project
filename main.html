@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quản Lý Sinh Viên</title>
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="./assets/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="./assets/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./assets/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./assets/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="./assets/favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="./assets/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="./assets/favicon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Font awesome cnd -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+
+        <!-- Embed fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header__inner">
+                    <!-- Logo -->
+                    <a href="#">
+                        <img
+                            src="./assets/image/logo.jpg"
+                            alt="Rikkei Academy"
+                            class="logo"
+                        />
+                    </a>
+
+                    <!-- Title header -->
+                    <h1 class="title__header">
+                        HỆ THỐNG QUẢN LÝ SINH VIÊN RIKKEI
+                    </h1>
+
+                    <!-- Header Action -->
+                    <div class="header-action">
+                        <!-- Đăng nhập -->
+                        <i class="fa-solid fa-user"></i>
+                        <!-- Đăng Xuất -->
+                        <i
+                            class="fa-solid fa-right-to-bracket"
+                            id="logout-icon"
+                        ></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <div class="container">
+                <div class="main__inner">
+                    <!-- Navbar -->
+                    <nav class="navbar">
+                        <div class="nav-group" id="statistic__link">
+                            <img
+                                src="./assets/image/statistics.png"
+                                class="navbar__icon"
+                                alt=""
+                            />
+                            <a
+                                href="#"
+                                class="navbar__link navbar__link-statistic"
+                            >
+                                Bảng điều khiển
+                            </a>
+                        </div>
+                        <div class="nav-group" id="course__link">
+                            <img
+                                src="./assets/image/stack-of-books.png"
+                                class="navbar__icon"
+                                alt=""
+                            />
+                            <a
+                                href="#"
+                                class="navbar__link navbar__link-course"
+                            >
+                                Quản lý khóa học
+                            </a>
+                        </div>
+                        <div class="nav-group" id="class__link">
+                            <img
+                                src="./assets/image/teachings.png"
+                                class="navbar__icon"
+                                alt=""
+                            />
+                            <a href="#" class="navbar__link navbar__link-class">
+                                Quản lý lớp học
+                            </a>
+                        </div>
+                        <div class="nav-group" id="student__link">
+                            <img
+                                src="./assets/image/student.png"
+                                class="navbar__icon"
+                                alt=""
+                            />
+                            <a
+                                href="#"
+                                class="navbar__link navbar__link-student"
+                            >
+                                Quản lý sinh viên
+                            </a>
+                        </div>
+                        <div class="nav-group" id="tk__link">
+                            <img
+                                src="./assets/image/account.png"
+                                class="navbar__icon"
+                                alt=""
+                            />
+                            <a href="#" class="navbar__link navbar__link-tk">
+                                Quản lý tài khoản
+                            </a>
+                        </div>
+                    </nav>
+
+                    <!-- statistical -->
+                    <div class="statistic">
+                        <table>
+                            <tr class="statistic__heading">
+                                <td class="image__statistic">
+                                    <img
+                                        src="./assets/image/course.png"
+                                        alt="Khóa học"
+                                        class="icon-course icon-statistic"
+                                    />
+                                </td>
+                                <td colspan="2" class="desc-statistic">
+                                    Thống kê khóa học
+                                </td>
+                            </tr>
+                            <tr class="statistic__info">
+                                <td></td>
+                                <td>
+                                    <p class="title-statistic">Số khóa học:</p>
+                                </td>
+                                <td class="num-course">
+                                    <span class="num num-course">5</span>
+                                </td>
+                            </tr>
+                            <tr class="statistic__heading">
+                                <td class="image__statistic">
+                                    <img
+                                        src="./assets/image/class.png"
+                                        alt="Lớp học"
+                                        class="icon-statistic"
+                                    />
+                                </td>
+                                <td colspan="2" class="desc-statistic">
+                                    Thống kê lớp học
+                                </td>
+                            </tr>
+                            <tr class="statistic__info">
+                                <td></td>
+                                <td>
+                                    <p class="title-statistic">Số lớp học:</p>
+                                </td>
+                                <td class="num-course">
+                                    <span class="num num-class">5</span>
+                                </td>
+                            </tr>
+                            <tr class="statistic__info">
+                                <td></td>
+                                <td>
+                                    <p class="title-statistic">
+                                        Số lớp đang hoạt động:
+                                    </p>
+                                </td>
+                                <td class="num-course">
+                                    <span class="num num-class-active">5</span>
+                                </td>
+                            </tr>
+                            <tr class="statistic__info">
+                                <td></td>
+                                <td>
+                                    <p class="title-statistic">
+                                        Số lớp đã kết thúc:
+                                    </p>
+                                </td>
+                                <td class="num-course">
+                                    <span class="num num-class-finish">5</span>
+                                </td>
+                            </tr>
+                            <tr class="statistic__info">
+                                <td></td>
+                                <td>
+                                    <p class="title-statistic">
+                                        Số lớp đang chờ:
+                                    </p>
+                                </td>
+                                <td class="num-course">
+                                    <span class="num num-class-wait">5</span>
+                                </td>
+                            </tr>
+                            <tr class="statistic__heading">
+                                <td class="image__statistic">
+                                    <img
+                                        src="./assets/image/sum-students.png"
+                                        alt="Sinh viên"
+                                        class="icon-statistic"
+                                    />
+                                </td>
+                                <td colspan="2" class="desc-statistic">
+                                    Thống kê sinh viên
+                                </td>
+                            </tr>
+                            <tr class="statistic__info">
+                                <td></td>
+                                <td>
+                                    <p class="title-statistic">Tổng số SV:</p>
+                                </td>
+                                <td class="num-course">
+                                    <span class="num num-student">5</span>
+                                </td>
+                            </tr>
+                            <tr class="statistic__info">
+                                <td></td>
+                                <td>
+                                    <p class="title-statistic">
+                                        Số SV chờ lớp:
+                                    </p>
+                                </td>
+                                <td class="num-course">
+                                    <span class="num num-student-wait">5</span>
+                                </td>
+                            </tr>
+                            <tr class="statistic__info">
+                                <td></td>
+                                <td>
+                                    <p class="title-statistic">
+                                        Số SV đang học:
+                                    </p>
+                                </td>
+                                <td class="num-course">
+                                    <span class="num num-student-active"
+                                        >5</span
+                                    >
+                                </td>
+                            </tr>
+                            <tr class="statistic__info">
+                                <td></td>
+                                <td>
+                                    <p class="title-statistic">
+                                        Số SV bảo lưu/đình chỉ:
+                                    </p>
+                                </td>
+                                <td class="num-course">
+                                    <span class="num num-student-leave">5</span>
+                                </td>
+                            </tr>
+                            <tr class="statistic__info">
+                                <td></td>
+                                <td>
+                                    <p class="title-statistic">
+                                        Số SV tốt nghiệp:
+                                    </p>
+                                </td>
+                                <td class="num-course">
+                                    <span class="num num-student-graduate"
+                                        >5</span
+                                    >
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- courses -->
+                    <div class="course">
+                        <div class="course__heading">Quản Lý Khóa Học</div>
+                        <div class="course__action">
+                            <div class="course-add__inner">
+                                <img
+                                    src="./assets/image/add.png"
+                                    alt="Thêm mới"
+                                    class="icon-add-course"
+                                />
+                                <p class="title-add-course">Thêm mới</p>
+                            </div>
+                            <div class="group-course-search">
+                                <!-- Header search -->
+                                <form class="search__form">
+                                    <input
+                                        type="text"
+                                        class="search__form-input"
+                                        placeholder="Tìm kiếm"
+                                    />
+                                    <!-- Clear button -->
+                                    <button class="search__form-close">
+                                        <i class="fa-solid fa-circle-xmark"></i>
+                                    </button>
+                                    <!-- Submit button -->
+                                    <button
+                                        type="submit"
+                                        class="search__form-btn"
+                                    >
+                                        <i class="fa-solid fa-magnifying-glass">
+                                        </i>
+                                    </button>
+                                </form>
+                                <select
+                                    name=""
+                                    id=""
+                                    class="select-search select-search-course"
+                                >
+                                    <option value="all">Tất cả</option>
+                                    <option value="MaKH">Mã khóa học</option>
+                                    <option value="TenKH">Tên khóa học</option>
+                                    <option value="time">
+                                        Thời gian (giờ)
+                                    </option>
+                                    <option value="status">Trạng thái</option>
+                                </select>
+                            </div>
+                            <div class="group-sort">
+                                <p class="group-sort-desc">Lựa chọn</p>
+                                <select
+                                    name=""
+                                    id=""
+                                    class="sort-search sort-search-course"
+                                >
+                                    <option selected value="default">
+                                        Mặc định
+                                    </option>
+                                    <option value="asc">A-Z</option>
+                                    <option value="desc">Z-A</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="list-course">
+                            <table>
+                                <tr class="list-course-heading">
+                                    <td>STT</td>
+                                    <td>Mã khóa học</td>
+                                    <td>Tên khóa học</td>
+                                    <td>Thời gian</td>
+                                    <td>Trạng thái</td>
+                                    <td>Hành động</td>
+                                </tr>
+                                <tbody id="list-course-content">
+                                    <!-- <tr class="list-course-info">
+                                        <td>1</td>
+                                        <td>RA01</td>
+                                        <td>Khóa học 1</td>
+                                        <td>1000</td>
+                                        <td>Hoạt động</td>
+                                        <td>
+                                            <div class="list-course-btn">
+                                                <button
+                                                    class="list-course-btn-edit"
+                                                >
+                                                    Sửa
+                                                </button>
+                                                <button
+                                                    class="list-course-btn-delete"
+                                                >
+                                                    Xóa
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-course">
+                            <!-- Previous -->
+                            <div class="page-course-btn">
+                                <!-- <button class="page-course-num">1</button>
+                                <button class="page-course-num">2</button>
+                                <button class="page-course-num">10</button> -->
+                            </div>
+                            <!-- Next -->
+                            <input
+                                type="text"
+                                name=""
+                                id="page-course-search-num"
+                                class="page-course-search-num"
+                                placeholder="Trang tìm kiếm"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- class -->
+                    <div class="class-section">
+                        <div class="class__heading">Quản Lý Lớp Học</div>
+                        <div class="class__action">
+                            <div class="class-add__inner">
+                                <img
+                                    src="./assets/image/add.png"
+                                    alt="Thêm mới"
+                                    class="icon-add-class"
+                                />
+                                <p class="title-add-class">Thêm mới</p>
+                            </div>
+                            <div class="group-class-search">
+                                <!-- Header search -->
+                                <form class="search__form">
+                                    <input
+                                        type="text"
+                                        class="search__form-input search__form-input-class"
+                                        placeholder="Tìm kiếm"
+                                    />
+                                    <!-- Clear button -->
+                                    <button
+                                        class="search__form-close search__form-close-class"
+                                    >
+                                        <i class="fa-solid fa-circle-xmark"></i>
+                                    </button>
+                                    <!-- Submit button -->
+                                    <button
+                                        type="submit"
+                                        class="search__form-btn"
+                                    >
+                                        <i class="fa-solid fa-magnifying-glass">
+                                        </i>
+                                    </button>
+                                </form>
+                                <select
+                                    name=""
+                                    id=""
+                                    class="select-search select-search-class"
+                                >
+                                    <option value="all">Tất cả</option>
+                                    <option value="MaLH">Mã lớp</option>
+                                    <option value="TenLH">Tên lớp</option>
+                                    <option value="GV">Tên giảng viên</option>
+                                    <option value="DESC">Mô tả</option>
+                                    <option value="Num">Sĩ số</option>
+                                    <option value="Status">Trạng thái</option>
+                                    <option value="TenKH">Tên khóa học</option>
+                                </select>
+                            </div>
+                            <div class="group-sort">
+                                <p class="group-sort-desc">Lựa chọn</p>
+                                <select
+                                    name=""
+                                    id=""
+                                    class="sort-search sort-search-class"
+                                >
+                                    <option selected value="default">
+                                        Mặc định
+                                    </option>
+                                    <option value="asc">A-Z</option>
+                                    <option value="desc">Z-A</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="list-class">
+                            <table>
+                                <tr class="list-class-heading">
+                                    <td>STT</td>
+                                    <td>Mã lớp</td>
+                                    <td>Tên lớp</td>
+                                    <td>Giảng viên</td>
+                                    <td>Mô tả</td>
+                                    <td>Sĩ số</td>
+                                    <td>Trạng thái</td>
+                                    <td>Khóa học</td>
+                                    <td>Hành động</td>
+                                </tr>
+                                <tbody id="list-class-content">
+                                    <!-- <tr class="list-class-info">
+                                        <td>1</td>
+                                        <td>C001</td>
+                                        <td>HN-JV230508</td>
+                                        <td>QuangND</td>
+                                        <td>Java fullstack</td>
+                                        <td>20</td>
+                                        <td>Chờ lớp</td>
+                                        <td>Khóa học 1</td>
+                                        <td>
+                                            <div class="list-class-btn">
+                                                <button
+                                                    class="list-class-btn-edit"
+                                                >
+                                                    Sửa
+                                                </button>
+                                                <button
+                                                    class="list-class-btn-delete"
+                                                >
+                                                    Xóa
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-class">
+                            <!-- Previous -->
+                            <div class="page-class-btn">
+                                <!-- <button class="page-class-num">1</button>
+                                <button class="page-class-num">2</button>
+                                <button class="page-class-num">10</button> -->
+                            </div>
+                            <!-- Next -->
+                            <input
+                                type="text"
+                                name=""
+                                id="page-class-search-num"
+                                class="page-class-search-num"
+                                placeholder="Trang tìm kiếm"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- student -->
+                    <div class="student-section">
+                        <div class="student__heading">Quản Lý Sinh Viên</div>
+                        <div class="student__action">
+                            <div class="student-add__inner">
+                                <img
+                                    src="./assets/image/add.png"
+                                    alt="Thêm mới"
+                                    class="icon-add-student"
+                                />
+                                <p class="title-add-student">Thêm mới</p>
+                            </div>
+                            <div class="group-student-search">
+                                <!-- Header search -->
+                                <form class="search__form">
+                                    <input
+                                        type="text"
+                                        class="search__form-input search__form-input-student"
+                                        placeholder="Tìm kiếm"
+                                    />
+                                    <!-- Clear button -->
+                                    <button
+                                        class="search__form-close search__form-close-student"
+                                    >
+                                        <i class="fa-solid fa-circle-xmark"></i>
+                                    </button>
+                                    <!-- Submit button -->
+                                    <button
+                                        type="submit"
+                                        class="search__form-btn"
+                                    >
+                                        <i class="fa-solid fa-magnifying-glass">
+                                        </i>
+                                    </button>
+                                </form>
+                                <select
+                                    name=""
+                                    id=""
+                                    class="select-search select-search-student"
+                                >
+                                    <option value="all">Tất cả</option>
+                                    <option value="MaSV">Mã SV</option>
+                                    <option value="TenSV">Tên SV</option>
+                                    <option value="Year">Năm sinh</option>
+                                    <option value="Address">Địa chỉ</option>
+                                    <option value="Gender">Giới tính</option>
+                                    <option value="Status">Trạng thái</option>
+                                    <option value="TenLH">Lớp học</option>
+                                </select>
+                            </div>
+                            <div class="group-sort">
+                                <p class="group-sort-desc">Lựa chọn</p>
+                                <select
+                                    name=""
+                                    id=""
+                                    class="sort-search sort-search-student"
+                                >
+                                    <option selected value="default">
+                                        Mặc định
+                                    </option>
+                                    <option value="asc">A-Z</option>
+                                    <option value="desc">Z-A</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="list-student">
+                            <table>
+                                <tr class="list-student-heading">
+                                    <td>STT</td>
+                                    <td>Mã SV</td>
+                                    <td>Tên SV</td>
+                                    <td>Năm sinh</td>
+                                    <td>Địa chỉ</td>
+                                    <td>Giới tính</td>
+                                    <td>Trạng thái</td>
+                                    <td>Lớp học</td>
+                                    <td>Hành động</td>
+                                </tr>
+                                <tbody id="list-student-content">
+                                    <!-- <tr class="list-student-info">
+                                        <td>1</td>
+                                        <td>SV001</td>
+                                        <td>Nguyễn Văn A</td>
+                                        <td>2000</td>
+                                        <td>Hà Nội</td>
+                                        <td>Nam</td>
+                                        <td>Chờ lớp</td>
+                                        <td>ĐN-JS230407</td>
+                                        <td>
+                                            <div class="list-student-btn">
+                                                <button
+                                                    class="list-student-btn-edit"
+                                                >
+                                                    Sửa
+                                                </button>
+                                                <button
+                                                    class="list-student-btn-delete"
+                                                >
+                                                    Xóa
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-student">
+                            <!-- Previous -->
+                            <div class="page-student-btn">
+                                <!-- <button class="page-student-num">1</button>
+                                <button class="page-student-num">2</button>
+                                <button class="page-student-num">10</button> -->
+                            </div>
+                            <!-- Next -->
+                            <input
+                                type="text"
+                                name=""
+                                id="page-student-search-num"
+                                class="page-student-search-num"
+                                placeholder="Trang tìm kiếm"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- account -->
+                    <div class="tk">
+                        <div class="tk__heading">Quản Lý Tài Khoản</div>
+                        <div class="tk__action">
+                            <!-- <div class="tk-add__inner">
+                                <img
+                                    src="./assets/image/add.png"
+                                    alt="Thêm mới"
+                                    class="icon-add-course"
+                                />
+                                <p class="title-add-course">Thêm mới</p>
+                            </div> -->
+                            <div class="group-tk-search">
+                                <!-- Header search -->
+                                <form class="search__form">
+                                    <input
+                                        type="text"
+                                        class="search__form-input search__form-input-tk"
+                                        placeholder="Tìm kiếm"
+                                    />
+                                    <!-- Clear button -->
+                                    <button
+                                        class="search__form-close search__form-close-tk"
+                                    >
+                                        <i class="fa-solid fa-circle-xmark"></i>
+                                    </button>
+                                    <!-- Submit button -->
+                                    <button
+                                        type="submit"
+                                        class="search__form-btn"
+                                    >
+                                        <i class="fa-solid fa-magnifying-glass">
+                                        </i>
+                                    </button>
+                                </form>
+                                <select
+                                    name=""
+                                    id=""
+                                    class="select-search select-search-tk"
+                                >
+                                    <option value="all">Tất cả</option>
+                                    <option value="Email">Email</option>
+                                    <option value="Password">Password</option>
+                                    <option value="Name">Họ và tên</option>
+                                    <option value="Status">Trạng thái</option>
+                                </select>
+                            </div>
+                            <div class="group-sort">
+                                <p class="group-sort-desc">Lựa chọn</p>
+                                <select
+                                    name=""
+                                    id=""
+                                    class="sort-search sort-search-tk"
+                                >
+                                    <option selected value="default">
+                                        Mặc định
+                                    </option>
+                                    <option value="asc">A-Z</option>
+                                    <option value="desc">Z-A</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="list-tk">
+                            <table>
+                                <tr class="list-tk-heading">
+                                    <td>STT</td>
+                                    <td>Email</td>
+                                    <td>Password</td>
+                                    <td>Họ và tên</td>
+                                    <td>Trạng thái</td>
+                                    <td>Hành động</td>
+                                </tr>
+                                <tbody id="list-tk-content">
+                                    <!-- <tr class="list-tk-info">
+                                        <td>1</td>
+                                        <td class="list-info-td">
+                                            anv@rikkeiacademy.edu.vn
+                                        </td>
+                                        <td>123456</td>
+                                        <td>Hoàng Văn A</td>
+                                        <td>Đang hoạt động</td>
+                                        <td>
+                                            <div class="list-tk-btn">
+                                                <button
+                                                    class="list-tk-btn-open-block"
+                                                >
+                                                    Mở khóa
+                                                </button>
+                                                <button
+                                                    class="list-tk-btn-delete"
+                                                >
+                                                    Xóa
+                                                </button>
+                                                <button
+                                                    class="list-tk-btn-block"
+                                                >
+                                                    Khóa
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-tk">
+                            <!-- Previous -->
+                            <div class="page-tk-btn">
+                                <!-- <button class="page-tk-num">1</button>
+                                <button class="page-tk-num">2</button>
+                                <button class="page-tk-num">10</button> -->
+                            </div>
+                            <!-- Next -->
+                            <input
+                                type="text"
+                                name=""
+                                id="page-tk-search-num"
+                                class="page-tk-search-num"
+                                placeholder="Trang tìm kiếm"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- add course -->
+        <div class="overlay" id="add-overlay">
+            <div class="add-course">
+                <label for="modal-toggle" class="add-course__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <h2 class="add-course__heading">Modal - Thêm mới khóa học</h2>
+                <div class="add-course__inner">
+                    <div class="add-course__row login__row">
+                        <label for="course-code" class="add-course__desc">
+                            Mã khóa học
+                        </label>
+                        <div class="add-course-wrap-input">
+                            <input
+                                type="text"
+                                id="course-code"
+                                class="add-course__input"
+                                placeholder="Nhập mã khóa học"
+                            />
+                            <br />
+                            <span id="error-course-code" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-course__row">
+                        <label for="course-name" class="add-course__desc">
+                            Tên khóa học
+                        </label>
+                        <div class="add-course-wrap-input">
+                            <input
+                                type="text"
+                                id="course-name"
+                                class="add-course__input"
+                                placeholder="Nhập tên khóa học"
+                            />
+                            <br />
+                            <span id="error-course-name" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-course__row">
+                        <label for="course-time" class="add-course__desc">
+                            Thời gian
+                        </label>
+                        <div class="add-course-wrap-input">
+                            <input
+                                type="text"
+                                id="course-time"
+                                class="add-course__input"
+                                placeholder="Nhập thời gian khóa học"
+                            />
+                            <br />
+                            <span id="error-course-time" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-course__row">
+                        <label class="add-course__desc">Trạng thái</label>
+                        <div class="add-course__wrap">
+                            <div class="add-course__group-radio">
+                                <input
+                                    type="radio"
+                                    name="course-status"
+                                    value="1"
+                                    class="course-status"
+                                    id="add-course__active"
+                                />
+                                <label for="add-course__active">
+                                    Hoạt động
+                                </label>
+                            </div>
+                            <div class="add-course__group-radio">
+                                <input
+                                    type="radio"
+                                    name="course-status"
+                                    value="0"
+                                    class="course-status"
+                                    id="add-course__inactive"
+                                />
+                                <label for="add-course__inactive">
+                                    Không hoạt động
+                                </label>
+                            </div>
+                            <span
+                                id="error-course-status"
+                                class="error-message error-message-radio"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-course__btn">
+                    <button class="add-course__new">Thêm mới</button>
+                    <button class="add-course__cancel">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- update course -->
+        <div class="overlay" id="update-overlay">
+            <div class="update-course">
+                <label for="modal-toggle" class="update-course__close">
+                    <!-- <i class="fa-solid fa-xmark"></i> -->
+                </label>
+                <h2 class="update-course__heading">
+                    Modal - Cập nhật mới khóa học
+                </h2>
+                <div class="update-course__inner">
+                    <div class="update-course__row">
+                        <label
+                            for="update-course-code"
+                            class="update-course__desc"
+                        >
+                            Mã khóa học
+                        </label>
+                        <div class="update-course-wrap-input">
+                            <input
+                                type="text"
+                                id="update-course-code"
+                                class="update-course__input"
+                                placeholder="Nhập mã khóa học"
+                            />
+                            <br />
+                            <span
+                                id="update-error-course-code"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-course__row">
+                        <label
+                            for="update-course-name"
+                            class="update-course__desc"
+                        >
+                            Tên khóa học
+                        </label>
+                        <div class="update-course-wrap-input">
+                            <input
+                                type="text"
+                                id="update-course-name"
+                                class="update-course__input"
+                                placeholder="Nhập tên khóa học"
+                            />
+                            <br />
+                            <span
+                                id="update-error-course-name"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-course__row">
+                        <label
+                            for="update-course-time"
+                            class="update-course__desc"
+                        >
+                            Thời gian
+                        </label>
+                        <div class="update-course-wrap-input">
+                            <input
+                                type="text"
+                                id="update-course-time"
+                                class="update-course__input"
+                                placeholder="Nhập thời gian khóa học"
+                            />
+                            <br />
+                            <span
+                                id="update-error-course-time"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-course__row">
+                        <label class="update-course__desc">Trạng thái</label>
+                        <div class="update-course__wrap">
+                            <div class="update-course__group-radio">
+                                <input
+                                    type="radio"
+                                    name="course-status"
+                                    value="1"
+                                    id="update-course__active"
+                                />
+                                <label for="update-course__active">
+                                    Hoạt động
+                                </label>
+                            </div>
+                            <div class="update-course__group-radio">
+                                <input
+                                    type="radio"
+                                    name="course-status"
+                                    value="1"
+                                    id="update-course__inactive"
+                                />
+                                <label for="update-course__inactive">
+                                    Không hoạt động
+                                </label>
+                            </div>
+                            <span
+                                id="update-error-course-status"
+                                class="error-message error-message-radio"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="update-course__btn">
+                    <button class="update-course__new">Cập nhật</button>
+                    <button class="update-course__cancel">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- delete course -->
+        <div class="overlay" id="delete-overlay">
+            <div class="delete-course">
+                <div class="delete-course__heading">
+                    Bạn có chắc muốn xóa khóa học này?
+                </div>
+                <table class="delete-table">
+                    <tbody class="delete-table-tbody">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>RA01</td>
+                            <td>Khóa học 1</td>
+                            <td>1000</td>
+                            <td>Hoạt động</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+                <div class="delete-course__btn">
+                    <button class="delete-course-yes">Đồng ý</button>
+                    <button class="delete-course-no">Hủy</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- add class -->
+        <div class="overlay" id="add-class-overlay">
+            <div class="add-class">
+                <label for="modal-toggle" class="add-class__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <h2 class="add-class__heading">Modal - Thêm mới khóa học</h2>
+                <div class="add-class__inner">
+                    <div class="add-class__row">
+                        <label for="class-code" class="add-class__desc">
+                            Mã lớp học
+                        </label>
+                        <div class="add-class-wrap-input">
+                            <input
+                                type="text"
+                                id="class-code"
+                                class="add-class__input"
+                                placeholder="Nhập mã lớp học"
+                            />
+                            <br />
+                            <span id="error-class-code" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-class__row">
+                        <label for="class-name" class="add-class__desc">
+                            Tên lớp học
+                        </label>
+                        <div class="add-class-wrap-input">
+                            <input
+                                type="text"
+                                id="class-name"
+                                class="add-class__input"
+                                placeholder="Nhập tên lớp học"
+                            />
+                            <br />
+                            <span id="error-class-name" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-class__row">
+                        <label for="class-teacher" class="add-class__desc">
+                            Giảng viên
+                        </label>
+                        <div class="add-class-wrap-input">
+                            <input
+                                type="text"
+                                id="class-teacher"
+                                class="add-class__input"
+                                placeholder="Nhập tên giảng viên"
+                            />
+                            <br />
+                            <span
+                                id="error-class-teacher"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-class__row">
+                        <label for="class-num" class="add-class__desc">
+                            Sĩ số
+                        </label>
+                        <div class="add-class-wrap-input">
+                            <input
+                                type="text"
+                                id="class-num"
+                                class="add-class__input"
+                                placeholder="Nhập sĩ số lớp"
+                            />
+                            <br />
+                            <span id="error-class-num" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-class__row">
+                        <label for="class-desc" class="add-class__desc">
+                            Mô tả
+                        </label>
+                        <div class="add-class-wrap-input">
+                            <textarea
+                                type="text"
+                                id="class-desc"
+                                class="add-class__input"
+                                placeholder="Nhập mô tả lớp"
+                                rows="3"
+                            >
+                            </textarea>
+                            <br />
+                            <span id="error-class-desc" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-class__row">
+                        <label for="class-kh" class="add-class__desc">
+                            Tên khóa học
+                        </label>
+                        <div class="add-class-wrap-input">
+                            <select id="class-kh" class="add-class__input">
+                                <option selected value="default">
+                                    Chọn khóa học
+                                </option>
+                            </select>
+                            <br />
+                            <span id="error-class-kh" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-class__row">
+                        <label class="add-class__desc">Trạng thái</label>
+                        <div class="add-class__wrap">
+                            <div class="add-class__group-radio">
+                                <input
+                                    type="radio"
+                                    name="class-status"
+                                    value="Hoạt động"
+                                    class="class-status"
+                                    id="add-class__active"
+                                />
+                                <label for="add-class__active">
+                                    Hoạt động
+                                </label>
+                            </div>
+                            <div class="add-class__group-radio">
+                                <input
+                                    type="radio"
+                                    name="class-status"
+                                    value="Chờ lớp"
+                                    class="class-status"
+                                    id="add-class__wait"
+                                />
+                                <label for="add-class__wait"> Chờ lớp </label>
+                            </div>
+                            <div class="add-class__group-radio">
+                                <input
+                                    type="radio"
+                                    name="class-status"
+                                    value="Kết thúc"
+                                    class="class-status"
+                                    id="add-class__finish"
+                                />
+                                <label for="add-class__finish">
+                                    Kết thúc
+                                </label>
+                            </div>
+                            <span
+                                id="error-class-status"
+                                class="error-message error-message-radio"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-class__btn">
+                    <button class="add-class__new">Thêm mới</button>
+                    <button class="add-course__cancel add-class__cancel">
+                        Đóng
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- update class -->
+        <div class="overlay" id="update-class-overlay">
+            <div class="update-class">
+                <label for="modal-toggle" class="update-class__close">
+                    <!-- <i class="fa-solid fa-xmark"></i> -->
+                </label>
+                <h2 class="update-class__heading">
+                    Modal - Cập nhật mới lớp học
+                </h2>
+                <div class="update-class__inner">
+                    <div class="update-class__row">
+                        <label
+                            for="update-class-code"
+                            class="update-class__desc"
+                        >
+                            Mã lớp học
+                        </label>
+                        <div class="update-class-wrap-input">
+                            <input
+                                type="text"
+                                id="update-class-code"
+                                class="update-class__input"
+                                placeholder="Nhập mã lớp học"
+                            />
+                            <br />
+                            <span
+                                id="update-error-class-code"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-class__row">
+                        <label
+                            for="update-class-name"
+                            class="update-class__desc"
+                        >
+                            Tên lớp học
+                        </label>
+                        <div class="update-class-wrap-input">
+                            <input
+                                type="text"
+                                id="update-class-name"
+                                class="update-class__input"
+                                placeholder="Nhập tên lớp học"
+                            />
+                            <br />
+                            <span
+                                id="update-error-class-name"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-class__row">
+                        <label
+                            for="update-class-teacher"
+                            class="update-class__desc"
+                        >
+                            Giảng viên
+                        </label>
+                        <div class="update-class-wrap-input">
+                            <input
+                                type="text"
+                                id="update-class-teacher"
+                                class="update-class__input"
+                                placeholder="Nhập tên giảng viên"
+                            />
+                            <br />
+                            <span
+                                id="update-error-class-teacher"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-class__row">
+                        <label
+                            for="update-class-num"
+                            class="update-class__desc"
+                        >
+                            Sĩ số
+                        </label>
+                        <div class="update-class-wrap-input">
+                            <input
+                                type="text"
+                                id="update-class-num"
+                                class="update-class__input"
+                                placeholder="Nhập sĩ số lớp"
+                            />
+                            <br />
+                            <span
+                                id="update-error-class-num"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-class__row">
+                        <label
+                            for="update-class-desc"
+                            class="update-class__desc"
+                        >
+                            Mô tả
+                        </label>
+                        <div class="update-class-wrap-input">
+                            <textarea
+                                type="text"
+                                id="update-class-desc"
+                                class="update-class__input"
+                                placeholder="Nhập sĩ số lớp"
+                                rows="3"
+                            ></textarea>
+                            <br />
+                            <span
+                                id="update-error-class-desc"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-class__row">
+                        <label for="update-class-kh" class="update-class__desc">
+                            Khóa học
+                        </label>
+                        <div class="update-class-wrap-input">
+                            <select
+                                id="update-class-kh"
+                                class="update-class__input"
+                            ></select>
+                            <br />
+                            <span
+                                id="update-error-class-kh"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-class__row">
+                        <label class="update-class__desc">Trạng thái</label>
+                        <div class="update-class__wrap">
+                            <div class="update-class__group-radio">
+                                <input
+                                    type="radio"
+                                    name="class-status"
+                                    value="Hoạt động"
+                                    id="update-class__active"
+                                />
+                                <label for="update-class__active">
+                                    Hoạt động
+                                </label>
+                            </div>
+                            <div class="update-class__group-radio">
+                                <input
+                                    type="radio"
+                                    name="class-status"
+                                    value="Chờ lớp"
+                                    id="update-class__wait"
+                                />
+                                <label for="update-class__wait">
+                                    Chờ lớp
+                                </label>
+                            </div>
+                            <div class="update-class__group-radio">
+                                <input
+                                    type="radio"
+                                    name="class-status"
+                                    value="Kết thúc"
+                                    id="update-class__finish"
+                                />
+                                <label for="update-class__finish">
+                                    Kết thúc
+                                </label>
+                            </div>
+                            <span
+                                id="update-error-class-status"
+                                class="error-message error-message-radio"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="update-class__btn">
+                    <button class="update-class__new">Cập nhật</button>
+                    <button class="update-class__cancel">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- delete class -->
+        <div class="overlay" id="delete-class-overlay">
+            <div class="delete-class">
+                <div class="delete-class__heading">
+                    Bạn có chắc muốn xóa lớp học này?
+                </div>
+                <table class="delete-table">
+                    <tbody class="delete-table-tbody-class">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>C001</td>
+                            <td>HN-JV230508</td>
+                            <td>QuangND</td>
+                            <td>Java fullstack</td>
+                            <td>20</td>
+                            <td>Chờ lớp</td>
+                            <td>Khóa học 1</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+                <div class="delete-class__btn">
+                    <button class="delete-course-yes delete-class-yes">
+                        Đồng ý
+                    </button>
+                    <button class="delete-course-no delete-class-no">
+                        Hủy
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- add student -->
+        <div class="overlay" id="add-student-overlay">
+            <div class="add-student">
+                <label for="modal-toggle" class="add-student__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <h2 class="add-student__heading">Modal - Thêm mới sinh viên</h2>
+                <div class="add-student__inner">
+                    <div class="add-student__row">
+                        <label for="student-code" class="add-student__desc">
+                            Mã SV
+                        </label>
+                        <div class="add-student-wrap-input">
+                            <input
+                                type="text"
+                                id="student-code"
+                                class="add-student__input"
+                                placeholder="Nhập mã sinh viên"
+                            />
+                            <br />
+                            <span id="error-student-code" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-student__row">
+                        <label for="student-name" class="add-student__desc">
+                            Tên SV
+                        </label>
+                        <div class="add-student-wrap-input">
+                            <input
+                                type="text"
+                                id="student-name"
+                                class="add-student__input"
+                                placeholder="Nhập tên sinh viên"
+                            />
+                            <br />
+                            <span id="error-student-name" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-student__row">
+                        <label for="student-year" class="add-student__desc">
+                            Năm sinh
+                        </label>
+                        <div class="add-student-wrap-input">
+                            <input
+                                type="text"
+                                id="student-year"
+                                class="add-student__input"
+                                placeholder="Nhập năm sinh"
+                            />
+                            <br />
+                            <span id="error-student-year" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-student__row">
+                        <label for="student-address" class="add-student__desc">
+                            Địa chỉ
+                        </label>
+                        <div class="add-student-wrap-input">
+                            <input
+                                type="text"
+                                id="student-address"
+                                class="add-student__input"
+                                placeholder="Nhập địa chỉ"
+                            />
+                            <br />
+                            <span
+                                id="error-student-address"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-student__row">
+                        <label class="add-student__desc">Giới tính</label>
+                        <div class="add-student__wrap">
+                            <div class="add-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="student-gender"
+                                    value="male"
+                                    class="student-gender"
+                                    id="add-student__male"
+                                />
+                                <label for="add-student__male"> Nam </label>
+                            </div>
+                            <div class="add-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="student-gender"
+                                    value="female"
+                                    class="student-gender"
+                                    id="add-student__female"
+                                />
+                                <label for="add-student__female"> Nữ </label>
+                            </div>
+                            <br />
+                            <span
+                                id="error-student-gender"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-student__row">
+                        <label for="student-lh" class="add-student__desc">
+                            Lớp học
+                        </label>
+                        <div class="add-student-wrap-input">
+                            <select id="student-lh" class="add-student__input">
+                                <option selected value="default">
+                                    Chọn lớp học
+                                </option>
+                            </select>
+                            <br />
+                            <span id="error-student-lh" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="add-student__row">
+                        <label class="add-student__desc">Trạng thái</label>
+                        <div class="add-student__wrap add-student__wrap-flex">
+                            <div class="add-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="student-status"
+                                    value="Đang học"
+                                    class="student-status"
+                                    id="add-student__active"
+                                />
+                                <label for="add-student__active">
+                                    Đang học
+                                </label>
+                            </div>
+                            <div class="add-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="student-status"
+                                    value="Chờ lớp"
+                                    class="student-status"
+                                    id="add-student__wait"
+                                />
+                                <label for="add-student__wait"> Chờ lớp </label>
+                            </div>
+                            <div class="add-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="student-status"
+                                    value="Bảo lưu"
+                                    class="student-status"
+                                    id="add-student__reserve"
+                                />
+                                <label for="add-student__reserve">
+                                    Bảo lưu
+                                </label>
+                            </div>
+                            <div class="add-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="student-status"
+                                    value="Đình chỉ"
+                                    class="student-status"
+                                    id="add-student__suspended"
+                                />
+                                <label for="add-student__suspended">
+                                    Đình chỉ
+                                </label>
+                            </div>
+                            <div class="add-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="student-status"
+                                    value="Tốt nghiệp"
+                                    class="student-status"
+                                    id="add-student__graduate"
+                                />
+                                <label for="add-student__graduate">
+                                    Tốt nghiệp
+                                </label>
+                            </div>
+                            <span
+                                id="error-student-status"
+                                class="error-message error-message-radio"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-student__btn">
+                    <button class="add-student__new">Thêm mới</button>
+                    <button class="add-student__cancel">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- update student -->
+        <div class="overlay" id="update-student-overlay">
+            <div class="update-student">
+                <label for="modal-toggle" class="update-student__close">
+                    <!-- <i class="fa-solid fa-xmark"></i> -->
+                </label>
+                <h2 class="update-student__heading">Modal - Cập nhật mới SV</h2>
+                <div class="update-student__inner">
+                    <div class="update-student__row">
+                        <label
+                            for="update-student-code"
+                            class="update-student__desc"
+                        >
+                            Mã SV
+                        </label>
+                        <div class="update-student-wrap-input">
+                            <input
+                                type="text"
+                                id="update-student-code"
+                                class="update-student__input"
+                                placeholder="Nhập mã sinh viên"
+                            />
+                            <br />
+                            <span
+                                id="update-error-student-code"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-student__row">
+                        <label
+                            for="update-student-name"
+                            class="update-student__desc"
+                        >
+                            Tên SV
+                        </label>
+                        <div class="update-student-wrap-input">
+                            <input
+                                type="text"
+                                id="update-student-name"
+                                class="update-student__input"
+                                placeholder="Nhập tên sinh viên"
+                            />
+                            <br />
+                            <span
+                                id="update-error-student-name"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-student__row">
+                        <label
+                            for="update-student-year"
+                            class="update-student__desc"
+                        >
+                            Năm sinh
+                        </label>
+                        <div class="update-student-wrap-input">
+                            <input
+                                type="text"
+                                id="update-student-year"
+                                class="update-student__input"
+                                placeholder="Nhập năm sinh"
+                            />
+                            <br />
+                            <span
+                                id="update-error-student-year"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-student__row">
+                        <label
+                            for="update-student-address"
+                            class="update-student__desc"
+                        >
+                            Địa chỉ
+                        </label>
+                        <div class="update-student-wrap-input">
+                            <input
+                                type="text"
+                                id="update-student-address"
+                                class="update-student__input"
+                                placeholder="Nhập địa chỉ"
+                            />
+                            <br />
+                            <span
+                                id="update-error-student-address"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-student__row">
+                        <label class="update-student__desc">Giới tính</label>
+                        <div class="update-student__wrap">
+                            <div class="update-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="update-student-gender"
+                                    value="male"
+                                    class="update-student-gender"
+                                    id="update-student__male"
+                                />
+                                <label for="update-student__male"> Nam </label>
+                            </div>
+                            <div class="update-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="update-student-gender"
+                                    value="female"
+                                    class="update-student-gender"
+                                    id="update-student__female"
+                                />
+                                <label for="update-student__female"> Nữ </label>
+                            </div>
+                            <br />
+                            <span
+                                id="update-error-student-gender"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-student__row">
+                        <label
+                            for="update-student-lh"
+                            class="update-student__desc"
+                        >
+                            Lớp học
+                        </label>
+                        <div class="update-student-wrap-input">
+                            <select
+                                id="update-student-lh"
+                                class="update-student__input"
+                            ></select>
+                            <br />
+                            <span
+                                id="update-error-student-lh"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="update-student__row">
+                        <label class="update-student__desc">Trạng thái</label>
+                        <div
+                            class="update-student__wrap update-student__wrap-flex"
+                        >
+                            <div class="update-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="update-student-status"
+                                    value="Đang học"
+                                    class="update-student-status"
+                                    id="update-student__active"
+                                />
+                                <label for="update-student__active">
+                                    Đang học
+                                </label>
+                            </div>
+                            <div class="update-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="update-student-status"
+                                    value="Chờ lớp"
+                                    class="update-student-status"
+                                    id="update-student__wait"
+                                />
+                                <label for="update-student__wait">
+                                    Chờ lớp
+                                </label>
+                            </div>
+                            <div class="update-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="update-student-status"
+                                    value="Bảo lưu"
+                                    class="update-student-status"
+                                    id="update-student__reserve"
+                                />
+                                <label for="update-student__reserve">
+                                    Bảo lưu
+                                </label>
+                            </div>
+                            <div class="update-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="update-student-status"
+                                    value="Đình chỉ"
+                                    class="update-student-status"
+                                    id="update-student__suspended"
+                                />
+                                <label for="update-student__suspended">
+                                    Đình chỉ
+                                </label>
+                            </div>
+                            <div class="update-student__group-radio">
+                                <input
+                                    type="radio"
+                                    name="update-student-status"
+                                    value="Tốt nghiệp"
+                                    class="update-student-status"
+                                    id="update-student__graduate"
+                                />
+                                <label for="update-student__graduate">
+                                    Tốt nghiệp
+                                </label>
+                            </div>
+                            <span
+                                id="update-error-student-status"
+                                class="error-message error-message-radio"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="update-student__btn">
+                    <button class="update-student__new">Thêm mới</button>
+                    <button class="update-student__cancel">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- delete student -->
+        <div class="overlay" id="delete-student-overlay">
+            <div class="delete-student">
+                <div class="delete-student__heading">
+                    Bạn có chắc muốn xóa SV này?
+                </div>
+                <table class="delete-table">
+                    <tbody class="delete-table-tbody-student">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>SV001</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>2000</td>
+                            <td>Hà Nội</td>
+                            <td>Nam</td>
+                            <td>Chờ lớp</td>
+                            <td>ĐN-JS230407</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+
+                <div class="delete-class__btn delete-student__btn">
+                    <button class="delete-student-yes">Đồng ý</button>
+                    <button class="delete-student-no">Hủy</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- log in account -->
+        <div class="overlay" id="log-in-overlay">
+            <div class="log-in-account">
+                <!-- <label for="modal-toggle" class="login__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </label> -->
+                <h2 class="add-course__heading">Đăng Nhập Tài Khoản</h2>
+                <div class="login__inner">
+                    <div class="login__row">
+                        <label for="login-email" class="login__desc">
+                            Email
+                        </label>
+                        <div class="login-wrap-input">
+                            <input
+                                type="email"
+                                id="login-email"
+                                class="login__input"
+                                placeholder="Nhập Email"
+                            />
+                            <br />
+                            <span id="error-login-email" class="error-message">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="login__row">
+                        <label for="login-password" class="login__desc">
+                            Password
+                        </label>
+                        <div class="login-wrap-input">
+                            <input
+                                type="password"
+                                id="login-password"
+                                class="login__input"
+                                placeholder="Nhập Password"
+                            />
+                            <!-- Show Password -->
+                            <i
+                                class="fa-regular fa-eye-slash"
+                                id="login-password-eye"
+                            >
+                            </i>
+                            <!-- Hide Password -->
+                            <i
+                                class="fa-regular fa-eye"
+                                id="login-password-hide-eye"
+                            ></i>
+                            <br />
+                            <span
+                                id="error-login-password"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Đăng kí tài khoản -->
+                <a href="#!" class="register">Đăng ký tài khoản!</a>
+                <div class="login__btn">
+                    <button class="login__account">Đăng Nhập</button>
+                    <!-- <button class="login__cancel">Đóng</button> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- register account -->
+        <div class="overlay" id="register-overlay">
+            <div class="register-account">
+                <label for="modal-toggle" class="register__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <h2 class="add-course__heading">Đăng Kí Tài Khoản</h2>
+                <div class="register__inner">
+                    <div class="register__row">
+                        <label for="register-name" class="register__desc">
+                            Họ và tên
+                        </label>
+                        <div class="register-wrap-input">
+                            <input
+                                type="text"
+                                id="register-name"
+                                class="register__input"
+                                placeholder="Nhập học và tên"
+                            />
+                            <br />
+                            <span
+                                id="error-register-name"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="register__row">
+                        <label for="register-email" class="register__desc">
+                            Email
+                        </label>
+                        <div class="register-wrap-input">
+                            <input
+                                type="email"
+                                id="register-email"
+                                class="register__input"
+                                placeholder="Nhập Email"
+                            />
+                            <br />
+                            <span
+                                id="error-register-email"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="register__row">
+                        <label for="register-password" class="register__desc">
+                            Password
+                        </label>
+                        <div class="register-wrap-input">
+                            <input
+                                type="password"
+                                id="register-password"
+                                class="register__input"
+                                placeholder="Nhập Password"
+                            />
+                            <!-- Show Password -->
+                            <i
+                                class="fa-regular fa-eye-slash"
+                                id="register-password-eye"
+                            >
+                            </i>
+                            <!-- Hide Password -->
+                            <i
+                                class="fa-regular fa-eye"
+                                id="register-password-hide-eye"
+                            ></i>
+                            <br />
+                            <span
+                                id="error-register-password"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="register__row">
+                        <label
+                            for="repeat-register-password"
+                            class="register__desc"
+                        >
+                            Repeat
+                        </label>
+                        <div class="register-wrap-input">
+                            <input
+                                type="password"
+                                id="repeat-register-password"
+                                class="register__input"
+                                placeholder="Nhập lại Password"
+                            />
+                            <!-- Show Password -->
+                            <i
+                                class="fa-regular fa-eye-slash"
+                                id="register-repeat-password-eye"
+                            >
+                            </i>
+                            <!-- Hide Password -->
+                            <i
+                                class="fa-regular fa-eye"
+                                id="register-repeat-password-hide-eye"
+                            ></i>
+                            <br />
+                            <span
+                                id="error-repeat-register-password"
+                                class="error-message"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#!" class="login">Đăng nhập tài khoản!</a>
+                <div class="register__btn">
+                    <button class="register__account">Đăng Kí</button>
+                    <button class="register__cancel">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- log out account -->
+        <div class="overlay" id="log-out-overlay">
+            <div class="log-out-account">
+                <label for="modal-toggle" class="logout__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <h2 class="add-course__heading">Đăng Xuất Tài Khoản</h2>
+
+                <!-- Đăng kí tài khoản -->
+                <div class="logout__btn">
+                    <button class="logout__account">Đăng xuất</button>
+                    <button class="logout__cancel">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- block account -->
+        <div class="overlay" id="block-overlay">
+            <div class="block-account">
+                <!-- <label for="modal-toggle" class="block__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </label> -->
+                <h2 class="add-course__heading">
+                    Bạn muốn khóa tài khoản này?
+                </h2>
+                <table class="block-table">
+                    <tbody class="block-table-tbody-tk-block">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>dduc1171@gmail.com</td>
+                            <td>123456</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>Hoạt động</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <!-- Đăng kí tài khoản -->
+                <div class="block__btn">
+                    <button class="block__account">Khóa</button>
+                    <button class="block__cancel">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- open block account -->
+        <div class="overlay" id="open-block-overlay">
+            <div class="open-block-account">
+                <!-- <label for="modal-toggle" class="block__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </label> -->
+                <h2 class="add-course__heading">Bạn muốn mở tài khoản này?</h2>
+                <table class="open-block-table">
+                    <tbody class="block-table-tbody-tk-open-block">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>dduc1171@gmail.com</td>
+                            <td>123456</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>Hoạt động</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <!-- Đăng kí tài khoản -->
+                <div class="open-block__btn">
+                    <button class="open-block__account">Mở khóa</button>
+                    <button class="open-block__cancel">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- delete account -->
+        <div class="overlay" id="delete-tk-overlay">
+            <div class="delete-account">
+                <!-- <label for="modal-toggle" class="block__close">
+                    <i class="fa-solid fa-xmark"></i>
+                </label> -->
+                <h2 class="add-course__heading">Bạn muốn xóa tài khoản này?</h2>
+                <table class="delete-table">
+                    <tbody class="block-table-tbody-tk-delete">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>dduc1171@gmail.com</td>
+                            <td>123456</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>Hoạt động</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <!-- Đăng kí tài khoản -->
+                <div class="delete-account__btn">
+                    <button class="delete__account">Xóa</button>
+                    <button class="delete__cancel">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- Column 1 -->
+                    <div class="column">
+                        <a href="#">
+                            <img
+                                src="./assets/image/logo-footer.webp"
+                                alt="Rikkei Academy"
+                                class="logo-footer"
+                            />
+                        </a>
+                        <p class="desc">
+                            Need to help for your dream Career? trust us. With
+                            Lesson, study becomes a lot easier with us.
+                        </p>
+                        <div class="socials">
+                            <a href="#!">
+                                <img
+                                    src="./assets/icon/twitter.svg"
+                                    alt="Twitter"
+                                    class="icon"
+                                />
+                            </a>
+                            <a href="#!">
+                                <img
+                                    src="./assets/icon/Facebook.svg"
+                                    alt="Facebook"
+                                    class="icon"
+                                />
+                            </a>
+                            <a href="#!">
+                                <img
+                                    src="./assets/icon/Linkedin.svg"
+                                    alt="Linkedin"
+                                    class="icon"
+                                />
+                            </a>
+                            <a href="#!">
+                                <img
+                                    src="./assets/icon/Instagram.svg"
+                                    alt="Instagram"
+                                    class="icon"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Column 2 -->
+                    <div class="column">
+                        <h3 class="title">Company</h3>
+                        <ul class="list">
+                            <li>
+                                <a href="#!">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#!">Features</a>
+                            </li>
+                            <li>
+                                <a href="#!">Our Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#!">Latest News</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Column 3 -->
+                    <div class="column">
+                        <h3 class="title">Support</h3>
+                        <ul class="list">
+                            <li>
+                                <a href="#!">FAQ’s</a>
+                            </li>
+                            <li>
+                                <a href="#!">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a href="#!">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#!">Contact Us </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Coumn 4 -->
+                    <div class="column">
+                        <h3 class="title">Address</h3>
+                        <ul class="list">
+                            <li>
+                                <a href="#!">
+                                    <strong>Location:</strong> 27 Division St,
+                                    New York, NY 10002, USA
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!">
+                                    <strong>Email:</strong> email@gmail.com
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!">
+                                    <strong>Phone:</strong> + 000 1234 567 890
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <p>Copyright ©2022 webdesign.gdn All rights reserved</p>
+                </div>
+            </div>
+        </footer>
+
+        <script type="module" src="assets/js/statistic.js"></script>
+        <script type="module" src="assets/js/course.js"></script>
+        <script type="module" src="assets/js/class.js"></script>
+        <script type="module" src="assets/js/student.js"></script>
+        <script type="module" src="assets/js/account.js"></script>
+    </body>
+</html>
